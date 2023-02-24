@@ -4,6 +4,11 @@
  */
 package rodrigovasquez_lab5p2;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+
 /**
  *
  * @author Rui
@@ -15,6 +20,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        this.setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -26,21 +32,535 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jd_agregar = new javax.swing.JDialog();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        tf_nombre = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        tf_poder = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        tf_debilidad = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        cb_universo = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        sp_fuerza = new javax.swing.JSpinner();
+        sp_agiFisica = new javax.swing.JSpinner();
+        sp_agiMental = new javax.swing.JSpinner();
+        sp_hp = new javax.swing.JSpinner();
+        bt_guardar = new javax.swing.JButton();
+        jd_listar = new javax.swing.JDialog();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jt_personajes = new javax.swing.JTree();
+        jTextField1 = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jd_sim = new javax.swing.JDialog();
+        jPanel1 = new javax.swing.JPanel();
+        bt_agregar = new javax.swing.JButton();
+        bt_listar = new javax.swing.JButton();
+        bt_sim = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jd_agregar.setMaximumSize(new java.awt.Dimension(800, 500));
+        jd_agregar.setMinimumSize(new java.awt.Dimension(800, 500));
+        jd_agregar.setResizable(false);
+        jd_agregar.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel2.setMaximumSize(new java.awt.Dimension(800, 500));
+        jPanel2.setMinimumSize(new java.awt.Dimension(800, 500));
+        jPanel2.setPreferredSize(new java.awt.Dimension(800, 500));
+
+        jLabel2.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("agregar personaje");
+
+        jLabel3.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("nombre:");
+
+        jLabel4.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("poder:");
+
+        jLabel5.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Debilidad:");
+
+        jLabel6.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Universo:");
+
+        cb_universo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Marvel", "DC", "CapCom", "MidWay Games", " " }));
+
+        jLabel7.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Fuerza:");
+
+        jLabel8.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Agilidad Física:");
+
+        jLabel9.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Agilidad Mental:");
+
+        jLabel10.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("HP:");
+
+        sp_fuerza.setMaximumSize(new java.awt.Dimension(64, 22));
+
+        sp_agiFisica.setMaximumSize(new java.awt.Dimension(64, 22));
+
+        sp_agiMental.setMaximumSize(new java.awt.Dimension(64, 22));
+
+        sp_hp.setMaximumSize(new java.awt.Dimension(64, 22));
+
+        bt_guardar.setBackground(new java.awt.Color(0, 102, 51));
+        bt_guardar.setFont(new java.awt.Font("Algerian", 1, 14)); // NOI18N
+        bt_guardar.setForeground(new java.awt.Color(0, 0, 0));
+        bt_guardar.setText("Guardar");
+        bt_guardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_guardarMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_poder)
+                            .addComponent(tf_nombre)
+                            .addComponent(tf_debilidad)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(sp_fuerza, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(cb_universo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(sp_agiFisica, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(sp_agiMental, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sp_hp, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 310, Short.MAX_VALUE)
+                                .addComponent(bt_guardar))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(197, 197, 197)
+                        .addComponent(jLabel2)))
+                .addContainerGap(85, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(tf_nombre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(tf_poder))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(tf_debilidad))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(cb_universo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(sp_fuerza, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sp_agiFisica, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(sp_agiMental, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                                .addGap(105, 105, 105))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(sp_hp, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(bt_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60))))
+        );
+
+        jd_agregar.getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+
+        jd_listar.setMaximumSize(new java.awt.Dimension(800, 500));
+        jd_listar.setPreferredSize(new java.awt.Dimension(800, 500));
+        jd_listar.setResizable(false);
+        jd_listar.setSize(new java.awt.Dimension(800, 500));
+        jd_listar.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel3.setBackground(new java.awt.Color(102, 137, 250));
+        jPanel3.setMaximumSize(new java.awt.Dimension(800, 500));
+        jPanel3.setMinimumSize(new java.awt.Dimension(800, 500));
+        jPanel3.setPreferredSize(new java.awt.Dimension(800, 500));
+
+        jLabel11.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Listar personajes");
+
+        jPanel4.setBackground(new java.awt.Color(231, 253, 253));
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Personajes");
+        jt_personajes.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_personajes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_personajesMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jt_personajes);
+
+        jTextField1.setText("jTextField1");
+
+        jScrollPane2.setViewportView(jList1);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(197, 197, 197)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jLabel11)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jd_listar.getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+
+        javax.swing.GroupLayout jd_simLayout = new javax.swing.GroupLayout(jd_sim.getContentPane());
+        jd_sim.getContentPane().setLayout(jd_simLayout);
+        jd_simLayout.setHorizontalGroup(
+            jd_simLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 400, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jd_simLayout.setVerticalGroup(
+            jd_simLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1280, 650));
+        setMinimumSize(new java.awt.Dimension(1280, 650));
+        setPreferredSize(new java.awt.Dimension(1280, 650));
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
+
+        bt_agregar.setBackground(new java.awt.Color(153, 0, 0));
+        bt_agregar.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        bt_agregar.setForeground(new java.awt.Color(0, 0, 0));
+        bt_agregar.setText("Agregar Personaje");
+        bt_agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_agregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bt_agregar.setMaximumSize(new java.awt.Dimension(240, 60));
+        bt_agregar.setMinimumSize(new java.awt.Dimension(240, 60));
+        bt_agregar.setPreferredSize(new java.awt.Dimension(240, 60));
+        bt_agregar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_agregarMouseClicked(evt);
+            }
+        });
+
+        bt_listar.setBackground(new java.awt.Color(153, 0, 0));
+        bt_listar.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        bt_listar.setForeground(new java.awt.Color(0, 0, 0));
+        bt_listar.setText("Listado de Personaje");
+        bt_listar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_listar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bt_listar.setMaximumSize(new java.awt.Dimension(240, 60));
+        bt_listar.setMinimumSize(new java.awt.Dimension(240, 60));
+        bt_listar.setPreferredSize(new java.awt.Dimension(240, 60));
+        bt_listar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_listarMouseClicked(evt);
+            }
+        });
+
+        bt_sim.setBackground(new java.awt.Color(153, 0, 0));
+        bt_sim.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        bt_sim.setForeground(new java.awt.Color(0, 0, 0));
+        bt_sim.setText("Simulación de Batalla");
+        bt_sim.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_sim.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bt_sim.setMaximumSize(new java.awt.Dimension(240, 60));
+        bt_sim.setMinimumSize(new java.awt.Dimension(240, 60));
+        bt_sim.setPreferredSize(new java.awt.Dimension(240, 60));
+        bt_sim.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_simMouseClicked(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel1.setText("< B I E N V E N I D O >");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(464, 464, 464)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addComponent(bt_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(bt_listar, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(bt_sim, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(211, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel1)
+                .addGap(132, 132, 132)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bt_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_listar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_sim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(428, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 700));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bt_agregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarMouseClicked
+        // TODO add your handling code here:
+        this.setVisible(false);
+        abrir_Agregar();
+    }//GEN-LAST:event_bt_agregarMouseClicked
+
+    private void bt_listarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_listarMouseClicked
+        // TODO add your handling code here:
+        abrir_Listar();
+        this.setVisible(false);
+        DefaultTreeModel model = (DefaultTreeModel) jt_personajes.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
+        if (!dc.isEmpty()) {
+            DefaultMutableTreeNode DC = new DefaultMutableTreeNode("DC");
+            root.add(DC);
+            for (Personaje personaje : dc) {
+                DefaultMutableTreeNode nodoHijo = new DefaultMutableTreeNode(personaje);
+                DC.add(nodoHijo);
+
+            }
+        }
+        if (!marvel.isEmpty()) {
+            DefaultMutableTreeNode Marvel = new DefaultMutableTreeNode("Marvel");
+            root.add(Marvel);
+            for (Personaje personaje : marvel) {
+                DefaultMutableTreeNode nodoHijo = new DefaultMutableTreeNode(personaje);
+                Marvel.add(nodoHijo);
+            }
+
+        }
+        if (!capcom.isEmpty()) {
+            DefaultMutableTreeNode Capcom = new DefaultMutableTreeNode("CapCom");
+            root.add(Capcom);
+            for (Personaje personaje : capcom) {
+                DefaultMutableTreeNode nodoHijo = new DefaultMutableTreeNode(personaje);
+                Capcom.add(nodoHijo);
+            }
+
+        }
+        if (!midway.isEmpty()) {
+            DefaultMutableTreeNode Midway = new DefaultMutableTreeNode("MidWay Games");
+            root.add(Midway);
+            for (Personaje personaje : midway) {
+                DefaultMutableTreeNode nodoHijo = new DefaultMutableTreeNode(personaje);
+                Midway.add(nodoHijo);
+            }
+        }
+        model.reload();
+    }//GEN-LAST:event_bt_listarMouseClicked
+
+    private void bt_simMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_simMouseClicked
+        // TODO add your handling code here:
+        abrir_Sim();
+        this.setVisible(false);
+    }//GEN-LAST:event_bt_simMouseClicked
+
+    private void bt_guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_guardarMouseClicked
+        // TODO add your handling code here:
+        boolean newPersonaje = true;
+        if ((tf_nombre.getText().isBlank()) || (tf_poder.getText().isBlank()) || (tf_debilidad.getText().isBlank()) || ((Integer) sp_hp.getValue() == 0)) {
+            JOptionPane.showMessageDialog(jd_agregar, "Tiene que llenar todas las casillas, y HP no puede ser 0", "Inválido", 2);
+            tf_nombre.setText("");
+            tf_poder.setText("");
+            tf_debilidad.setText("");
+            sp_fuerza.setValue(0);
+            sp_agiFisica.setValue(0);
+            sp_agiMental.setValue(0);
+            sp_hp.setValue(0);
+        } else {
+            for (Personaje personaje : dc) {
+                if (tf_nombre.getText().equals(personaje.getName())) {
+                    newPersonaje = false;
+                }
+            }
+            for (Personaje personaje : marvel) {
+                if (tf_nombre.getText().equals(personaje.getName())) {
+                    newPersonaje = false;
+                }
+            }
+            for (Personaje personaje : capcom) {
+                if (tf_nombre.getText().equals(personaje.getName())) {
+                    newPersonaje = false;
+                }
+            }
+            for (Personaje personaje : midway) {
+                if (tf_nombre.getText().equals(personaje.getName())) {
+                    newPersonaje = false;
+                }
+            }
+            if (newPersonaje) {
+                if (cb_universo.getSelectedItem().equals("DC")) {
+                    dc.add(new Personaje(tf_nombre.getText(), tf_poder.getText(), tf_debilidad.getText(), (String) cb_universo.getSelectedItem(), (Integer) sp_fuerza.getValue(), (Integer) sp_agiMental.getValue(), (Integer) sp_agiFisica.getValue(), (Integer) sp_hp.getValue()));
+                } else if (cb_universo.getSelectedItem().equals("Marvel")) {
+                    marvel.add(new Personaje(tf_nombre.getText(), tf_poder.getText(), tf_debilidad.getText(), (String) cb_universo.getSelectedItem(), (Integer) sp_fuerza.getValue(), (Integer) sp_agiMental.getValue(), (Integer) sp_agiFisica.getValue(), (Integer) sp_hp.getValue()));
+                } else if (cb_universo.getSelectedItem().equals("CapCom")) {
+                    capcom.add(new Personaje(tf_nombre.getText(), tf_poder.getText(), tf_debilidad.getText(), (String) cb_universo.getSelectedItem(), (Integer) sp_fuerza.getValue(), (Integer) sp_agiMental.getValue(), (Integer) sp_agiFisica.getValue(), (Integer) sp_hp.getValue()));
+                } else if (cb_universo.getSelectedItem().equals("MidWay Games")) {
+                    midway.add(new Personaje(tf_nombre.getText(), tf_poder.getText(), tf_debilidad.getText(), (String) cb_universo.getSelectedItem(), (Integer) sp_fuerza.getValue(), (Integer) sp_agiMental.getValue(), (Integer) sp_agiFisica.getValue(), (Integer) sp_hp.getValue()));
+                }
+                JOptionPane.showMessageDialog(jd_agregar, "Se ha agregado " + tf_nombre.getText() + " al universo de " + cb_universo.getSelectedItem());
+                tf_nombre.setText("");
+                tf_poder.setText("");
+                tf_debilidad.setText("");
+                sp_fuerza.setValue(0);
+                sp_agiFisica.setValue(0);
+                sp_agiMental.setValue(0);
+                sp_hp.setValue(0);
+                this.setVisible(true);
+                jd_agregar.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(jd_agregar, "Ese personaje ya existe", "Inválido", 2);
+                tf_nombre.setText("");
+                tf_poder.setText("");
+                tf_debilidad.setText("");
+                sp_fuerza.setValue(0);
+                sp_agiFisica.setValue(0);
+                sp_agiMental.setValue(0);
+                sp_hp.setValue(0);
+            }
+        }
+    }//GEN-LAST:event_bt_guardarMouseClicked
+
+    private void jt_personajesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_personajesMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            DefaultTreeModel model = (DefaultTreeModel) jt_personajes.getModel();
+            DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
+            int row = jt_personajes.getClosestRowForLocation(
+                    evt.getX(), evt.getY());
+            jt_personajes.setSelectionRow(row);
+            Object v1
+                    = jt_personajes.getSelectionPath().
+                            getLastPathComponent();
+            nodo_seleccionado = (DefaultMutableTreeNode) v1;
+            if (nodo_seleccionado.getUserObject() instanceof Personaje) {
+                personaje_seleccionado
+                        = (Personaje) nodo_seleccionado.
+                                getUserObject();
+            } else {
+                for (int i = 0; i < root.getChildCount(); i++) {
+                    if (root.getChildAt(i).toString().equals("DC")) {
+
+                    } else if (root.getChildAt(i).toString().equals("Marvel")) {
+
+                    } else if (root.getChildAt(i).toString().equals("CapCom")) {
+
+                    } else if (root.getChildAt(i).toString().equals("MidWay Games")) {
+
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_jt_personajesMouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +598,70 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_agregar;
+    private javax.swing.JButton bt_guardar;
+    private javax.swing.JButton bt_listar;
+    private javax.swing.JButton bt_sim;
+    private javax.swing.JComboBox<String> cb_universo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JDialog jd_agregar;
+    private javax.swing.JDialog jd_listar;
+    private javax.swing.JDialog jd_sim;
+    private javax.swing.JTree jt_personajes;
+    private javax.swing.JSpinner sp_agiFisica;
+    private javax.swing.JSpinner sp_agiMental;
+    private javax.swing.JSpinner sp_fuerza;
+    private javax.swing.JSpinner sp_hp;
+    private javax.swing.JTextField tf_debilidad;
+    private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_poder;
     // End of variables declaration//GEN-END:variables
+
+    private void abrir_Agregar() {
+        jd_agregar.setModal(true);
+        jd_agregar.pack();
+        jd_agregar.setLocationRelativeTo(this);
+        jd_agregar.setVisible(true);
+    }
+
+    private void abrir_Listar() {
+        jd_listar.setModal(true);
+        jd_listar.pack();
+        jd_listar.setLocationRelativeTo(this);
+        jd_listar.setVisible(true);
+    }
+
+    private void abrir_Sim() {
+        jd_sim.setModal(true);
+        jd_sim.pack();
+        jd_sim.setLocationRelativeTo(this);
+        jd_sim.setVisible(true);
+    }
+
+    ArrayList<Personaje> dc = new ArrayList();
+    ArrayList<Personaje> marvel = new ArrayList();
+    ArrayList<Personaje> capcom = new ArrayList();
+    ArrayList<Personaje> midway = new ArrayList();
+
+    DefaultMutableTreeNode nodo_seleccionado;
+    Personaje personaje_seleccionado;
+
 }
