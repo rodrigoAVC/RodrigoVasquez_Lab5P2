@@ -101,6 +101,6 @@ public class Personaje {
     }
     
     public String toString() {
-        return name;
+        return "-> " + name;
     }
 }
