@@ -63,6 +63,16 @@ public class Main extends javax.swing.JFrame {
         jl_lista = new javax.swing.JList<>();
         jLabel11 = new javax.swing.JLabel();
         jd_sim = new javax.swing.JDialog();
+        jPanel3 = new javax.swing.JPanel();
+        cb_universoP1 = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        cb_universoP2 = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jl_P1 = new javax.swing.JList<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jl_P2 = new javax.swing.JList<>();
         pp_extra = new javax.swing.JPopupMenu();
         jmi_modificar = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
@@ -85,7 +95,7 @@ public class Main extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("agregar personaje");
+        jLabel2.setText("< a g r e g a r   p e r s o n a j e >");
 
         jLabel3.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -144,9 +154,9 @@ public class Main extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel5)
                             .addComponent(jLabel4)
@@ -172,13 +182,14 @@ public class Main extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 310, Short.MAX_VALUE)
                                 .addComponent(bt_guardar))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
+                        .addGap(69, 69, 69)
                         .addComponent(jLabel2)))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,7 +201,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(tf_poder))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
                     .addComponent(tf_debilidad))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,7 +264,7 @@ public class Main extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Listar personajes");
+        jLabel11.setText("< L i s t a r   p e r s o n a j e s >");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -267,10 +278,10 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(tf_nombreLista, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(200, 200, 200)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel11)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(105, 105, 105))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,22 +300,125 @@ public class Main extends javax.swing.JFrame {
 
         jd_listar.getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 500));
 
+        jd_sim.setMaximumSize(new java.awt.Dimension(800, 500));
+        jd_sim.setMinimumSize(new java.awt.Dimension(800, 500));
+        jd_sim.setSize(new java.awt.Dimension(800, 500));
+
+        jPanel3.setBackground(new java.awt.Color(168, 90, 168));
+
+        cb_universoP1.setFont(new java.awt.Font("Algerian", 1, 14)); // NOI18N
+        cb_universoP1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DC", "Marvel", "CamCom", "MidWay Games" }));
+        cb_universoP1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_universoP1ItemStateChanged(evt);
+            }
+        });
+        cb_universoP1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_universoP1ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("< S I M U L A C I Ó N >");
+
+        cb_universoP2.setFont(new java.awt.Font("Algerian", 1, 14)); // NOI18N
+        cb_universoP2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DC", "Marvel", "CamCom", "MidWay Games" }));
+        cb_universoP2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_universoP2ItemStateChanged(evt);
+            }
+        });
+        cb_universoP2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_universoP2ActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Algerian", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("< p l a y e r   # 1 >");
+
+        jLabel14.setFont(new java.awt.Font("Algerian", 1, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("< p l a y e r   # 2 >");
+
+        jl_P1.setBackground(new java.awt.Color(204, 204, 204));
+        jl_P1.setModel(new DefaultListModel()
+        );
+        jScrollPane3.setViewportView(jl_P1);
+
+        jl_P2.setBackground(new java.awt.Color(204, 204, 204));
+        jScrollPane4.setViewportView(jl_P2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(119, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(113, 113, 113))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(210, 210, 210)
+                        .addComponent(jLabel12))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(cb_universoP1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(97, 97, 97)
+                                .addComponent(jLabel14))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(132, 132, 132)
+                                .addComponent(cb_universoP2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_universoP2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_universoP1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jd_simLayout = new javax.swing.GroupLayout(jd_sim.getContentPane());
         jd_sim.getContentPane().setLayout(jd_simLayout);
         jd_simLayout.setHorizontalGroup(
             jd_simLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jd_simLayout.setVerticalGroup(
             jd_simLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jmi_modificar.setText("jMenuItem1");
+        jmi_modificar.setText("Modificar");
         pp_extra.add(jmi_modificar);
         pp_extra.add(jSeparator1);
 
-        jmi_eliminar.setText("jMenuItem2");
+        jmi_eliminar.setText("Eliminar");
         jmi_eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmi_eliminarActionPerformed(evt);
@@ -422,7 +536,7 @@ public class Main extends javax.swing.JFrame {
     private void bt_simMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_simMouseClicked
         // TODO add your handling code here:
         abrir_Sim();
-
+        
     }//GEN-LAST:event_bt_simMouseClicked
 
     private void bt_guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_guardarMouseClicked
@@ -604,6 +718,85 @@ public class Main extends javax.swing.JFrame {
         jl_lista.removeAll();
     }//GEN-LAST:event_jmi_eliminarActionPerformed
 
+    private void cb_universoP1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_universoP1ItemStateChanged
+        // TODO add your handling code here:
+//        DefaultListModel listModel = (DefaultListModel) jl_P1.getModel();
+//        if (((String) cb_universoP1.getSelectedItem()).equals("DC")) {
+//            for (Personaje personaje : dc) {
+//                listModel.addElement(personaje.toString());
+//            }
+//        } else if (((String) cb_universoP1.getSelectedItem()).equals("Marvel")) {
+//            listModel.addAll(marvel);
+//        } else if (((String) cb_universoP1.getSelectedItem()).equals("CamCom")) {
+//            listModel.addAll(capcom);
+//        } else if (((String) cb_universoP1.getSelectedItem()).equals("MidWay Games")) {
+//            listModel.addAll(midway);
+//        }
+//        jl_P1.setModel(listModel);
+    }//GEN-LAST:event_cb_universoP1ItemStateChanged
+
+    private void cb_universoP2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_universoP2ItemStateChanged
+        // TODO add your handling code here:
+//        DefaultListModel listModel = (DefaultListModel) jl_P2.getModel();
+//        if (((String) cb_universoP1.getSelectedItem()).equals("DC")) {
+//            listModel.addAll(dc);
+//        } else if (((String) cb_universoP1.getSelectedItem()).equals("Marvel")) {
+//            listModel.addAll(marvel);
+//        } else if (((String) cb_universoP1.getSelectedItem()).equals("CamCom")) {
+//            listModel.addAll(capcom);
+//        } else if (((String) cb_universoP1.getSelectedItem()).equals("MidWay Games")) {
+//            listModel.addAll(midway);
+//        }
+//        jl_P2.setModel(listModel);
+    }//GEN-LAST:event_cb_universoP2ItemStateChanged
+
+    private void cb_universoP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_universoP1ActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel listModel = (DefaultListModel) jl_P1.getModel();
+        if (((String) cb_universoP1.getSelectedItem()).equals("DC")) {
+            for (Personaje personaje : dc) {
+                listModel.addElement(personaje.toString());
+            }
+        } else if (((String) cb_universoP1.getSelectedItem()).equals("Marvel")) {
+            for (Personaje personaje : marvel) {
+                listModel.addElement(marvel.toString());
+            }
+        } else if (((String) cb_universoP1.getSelectedItem()).equals("CapCom")) {
+            for (Personaje personaje : capcom) {
+                listModel.addElement(capcom.toString());
+            }
+        } else if (((String) cb_universoP1.getSelectedItem()).equals("MidWay Games")) {
+            for (Personaje personaje : midway) {
+                listModel.addElement(midway.toString());
+            }
+            
+        }
+        jl_P1.setModel(listModel);
+    }//GEN-LAST:event_cb_universoP1ActionPerformed
+
+    private void cb_universoP2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_universoP2ActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel listModel = (DefaultListModel) jl_P2.getModel();
+        if (((String) cb_universoP2.getSelectedItem()).equals("DC")) {
+            for (Personaje personaje : dc) {
+                listModel.addElement(personaje.toString());
+            }
+        } else if (((String) cb_universoP2.getSelectedItem()).equals("Marvel")) {
+            for (Personaje personaje : marvel) {
+                listModel.addElement(marvel.toString());
+            }
+        } else if (((String) cb_universoP2.getSelectedItem()).equals("CapCom")) {
+            for (Personaje personaje : capcom) {
+                listModel.addElement(capcom.toString());
+            }
+        } else if (((String) cb_universoP2.getSelectedItem()).equals("MidWay Games")) {
+            for (Personaje personaje : midway) {
+                listModel.addElement(midway.toString());
+            }
+        }
+        jl_P1.setModel(listModel);
+    }//GEN-LAST:event_cb_universoP2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -645,9 +838,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton bt_listar;
     private javax.swing.JButton bt_sim;
     private javax.swing.JComboBox<String> cb_universo;
+    private javax.swing.JComboBox<String> cb_universoP1;
+    private javax.swing.JComboBox<String> cb_universoP2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -658,13 +856,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JDialog jd_agregar;
     private javax.swing.JDialog jd_listar;
     private javax.swing.JDialog jd_sim;
+    private javax.swing.JList<String> jl_P1;
+    private javax.swing.JList<String> jl_P2;
     private javax.swing.JList<String> jl_lista;
     private javax.swing.JMenuItem jmi_eliminar;
     private javax.swing.JMenuItem jmi_modificar;

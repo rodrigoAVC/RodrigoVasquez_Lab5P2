@@ -90,16 +90,7 @@ public class Personaje {
         this.HP = HP;
     }
 
-    public String toString2() {
-        return "[Poder -> " + poder + ']' + 
-                "[Debilidad -> " + debilidad + ']' +
-                "[Universo -> " + universo + ']' +
-                "[Fuerza -> " + fuerza + ']' +
-                "[Agilidad Mental -> " + agilidadMental + ']' +
-                "[Agilidad Física -> " + agilidadFisica + ']' +
-                "[HP -> " + HP + ']';
-    }
-    
+    @Override
     public String toString() {
         return "-> " + name;
     }
